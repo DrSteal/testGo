@@ -1,5 +1,9 @@
 package main
 
+import (
+	"fmt"
+)
+
 // package main
 
 // import (
@@ -127,15 +131,20 @@ package main
 // }
 
 // type UserCreateRequest struct {
-// 	FirstName string
-// 	Age       int
+// 	FirstName string // не может быть пустым; не может содержать пробелы
+// 	Age       int    // не может быть 0 или отрицательным; не может быть больше 150
 // }
 
 // func main() {
-// 	u := UserCreateRequest{"Kirill", 13}
-
+// 	u := UserCreateRequest{"fjs", 3}
 // 	fmt.Println(u)
+// }
 
+// func Validate(req UserCreateRequest) string {
+// 	if strings.Contains(req.FirstName, " ") || req.Age <= 0 {
+// 		fmt.Println("invalid request")
+// 	}
+// 	return fmt.Sprintf("%s%d", req.FirstName, req.Age)
 // }
 
 // func Validate(req UserCreateRequest) string {
@@ -154,4 +163,22 @@ package main
 
 // 	}
 
+// }
+
+const (
+	year     = 365
+	leapYear = int32(366)
+)
+
+func main() {
+	hours := 24
+	minutes := int32(60)
+	fmt.Println(hours * year)
+	fmt.Println(minutes * year)
+	fmt.Println(int32(hours) * leapYear)
+}
+
+// func Solution(word string) string {
+// 				runes := []rune(word)
+// 				for i, j :=
 // }
